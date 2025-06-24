@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h1 class="mb-4">Свяжитесь с нами</h1>
+                <form method="post" class="mt-4">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="mb-4">Наши контакты</h2>
+                <div class="contact-info">
+                    <h5 class="mt-3"><i class="bi bi-geo-alt-fill"></i> Адрес</h5>
+                    <p>г. Москва, ул. Примерная, 123, офис 45</p>
+
+                    <h5 class="mt-4"><i class="bi bi-telephone-fill"></i> Телефон</h5>
+                    <p>+7 (123) 456-78-90</p>
+
+                    <h5 class="mt-4"><i class="bi bi-envelope-fill"></i> Email</h5>
+                    <p>info@example.com</p>
+
+                    <h5 class="mt-4"><i class="bi bi-clock-fill"></i> Часы работы</h5>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                    <p>Сб-Вс: выходной</p>
+                </div>
+
+                <div class="mt-5">
+                    <h5><i class="bi bi-map-fill"></i> Мы на карте</h5>
+                    <div class="ratio ratio-16x9 mt-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373786033385!2d37.61763331593094!3d55.75170598055302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_RgNC10YHQvdC40LbQsNGA0LjRjw!5e0!3m2!1sru!2sru!4v1624455356789!5m2!1sru!2sru"
+                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

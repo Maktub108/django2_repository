@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Добро пожаловать!</h1>
+    <p class="lead">Это главная страница нашего сайта.</p>
+    <hr class="my-4 bg-light">
+    <p>Используйте меню для навигации по сайту.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a class="btn btn-light btn-lg px-4 gap-3" href="{% url 'about' %}" role="button">Узнать больше</a>
+        <a class="btn btn-outline-light btn-lg px-4" href="{% url 'contact' %}" role="button">Связаться с нами</a>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-gear-fill text-primary" style="font-size: 2rem;"></i>
+                <h5 class="card-title mt-3">Услуга 1</h5>
+                <p class="card-text">Описание первой услуги с основными преимуществами и характеристиками.</p>
+                <a href="{% url 'services' %}" class="btn btn-outline-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-speedometer2 text-primary" style="font-size: 2rem;"></i>
+                <h5 class="card-title mt-3">Услуга 2</h5>
+                <p class="card-text">Описание второй услуги с основными преимуществами и характеристиками.</p>
+                <a href="{% url 'services' %}" class="btn btn-outline-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-shield-check text-primary" style="font-size: 2rem;"></i>
+                <h5 class="card-title mt-3">Услуга 3</h5>
+                <p class="card-text">Описание третьей услуги с основными преимуществами и характеристиками.</p>
+                <a href="{% url 'services' %}" class="btn btn-outline-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5 mb-4">
+    <div class="col-12">
+        <div class="card bg-light">
+            <div class="card-body text-center py-4">
+                <h3 class="card-title">Готовы начать работу с нами?</h3>
+                <p class="card-text">Свяжитесь с нами сегодня и получите бесплатную консультацию</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Связаться</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
